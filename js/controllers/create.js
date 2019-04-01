@@ -1,9 +1,10 @@
-// THIS SCRIPT MANAGES THE create.html
+// THIS SCRIPT MANAGES THE create.html view
+
 var db = firebase.firestore();
 
 function saveRecipie(event){
     event.preventDefault();
-
+    
     var currentRecipie = {};
     Object.assign(currentRecipie, recipie);
 
@@ -15,13 +16,14 @@ function saveRecipie(event){
     currentRecipie.cost = $('#cost').val();
     currentRecipie.description = $('#description').val();
 
-    console.log(currentRecipie)
+    console.log(currentRecipie);
 
     db.collection('recipies')
     .doc()
     .set(currentRecipie)
     .then(function() {
         console.log("Document successfully written!");
+        alert('Yes ;)');
     })
     .catch(function(error) {
         console.error("Error writing document: ", error);
