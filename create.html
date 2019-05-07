@@ -25,6 +25,13 @@
  <link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">
 </head>
 
+  <!-- TINY MCE -->
+  <script src='https://cloud.tinymce.com/5/tinymce.min.js?apiKey=your_API_key'></script>
+  <script>
+  tinymce.init({
+    selector: '.mytextarea'
+  });
+  </script>
 <body>
   
   <!-- Navigation -->
@@ -83,38 +90,38 @@
 
               <div class="form-group">
                 <label for="name">Nome Ricetta</label>
-                <input type="text" class="form-control" id="name" placeholder="Nome Ricetta">
+                <input type="text" class="form-control" id="name" placeholder="Nome Ricetta" required>
               </div>
 
               <div class="form-group">
                 <label for="name">Numero di Persone</label>
-                <input type="text" class="form-control" id="people" placeholder="Numero di Persone">
+                <input type="number" class="form-control" id="people" placeholder="Numero di Persone" required>
               </div>
 
               <div class="form-group">
-                <label for="name">Tempo di preparazione</label>
-                <input type="text" class="form-control" id="preparationTime" placeholder="Tempo di preparazione">
+                <label for="name">Tempo di preparazione (minuti)</label>
+                <input type="number" class="form-control" id="preparationTime" placeholder="Tempo di preparazione" required>
               </div>
 
               <div class="form-group">
-                <label for="name">Tempo di cottura</label>
-                <input type="text" class="form-control" id="cookingTime" placeholder="Tempo di cottura">
+                <label for="name">Tempo di cottura (minuti)</label>
+                <input type="number" class="form-control" id="cookingTime" placeholder="Tempo di cottura" required>
               </div>
 
 
               <div class="form-group">
-                <label for="name">Difficoltà</label>
-                <input type="text" class="form-control" id="difficulty" placeholder="Difficoltà">
+                <label for="name">Difficoltà (Facile, Media, Difficile)</label>
+                <input type="text" class="form-control" id="difficulty" placeholder="Difficoltà" required>
               </div>
 
               <div class="form-group">
                 <label for="name">Costo Stimato</label>
-                <input type="text" class="form-control" id="cost" placeholder="Costo stimato">
+                <input type="number" class="form-control" id="cost" placeholder="Costo stimato" required>
               </div>
 
               <div class="form-group">
                 <label for="name">Procedimento</label>
-                <textarea class="form-control" id="description" placeholder="Scrivi qua il tuo svolgimento..."></textarea>
+                <textarea class="mytextarea" id="description" placeholder="Scrivi qua il tuo svolgimento..."></textarea>
               </div>
 
               <button class="btn btn-primary" >Submit</button>
@@ -122,7 +129,17 @@
       </div>
     </div>
 
-  </div>
+  </div><br>
+
+    <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
