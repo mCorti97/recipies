@@ -31,3 +31,7 @@ function saveRecipie(event){
 
     return false;
 }
+
+$('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+});
